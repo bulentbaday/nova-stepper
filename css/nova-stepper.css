@@ -1,0 +1,67 @@
+:root {
+    --primary-color: #337ab7;
+    --success-color: #5cb85c;
+    --warning-color: #f0ad4e;
+    --info-color: #5bc0de;
+    --danger-color: #d9534f;
+}
+
+.nova-stepper {
+    counter-reset: step;
+}
+
+	.nova-stepper li {
+		padding: 1em 0em;
+		list-style-type: none;
+		width: 100%;
+		position: relative;
+		text-align: left;
+		font-weight: bold;
+	}
+
+		.nova-stepper li:before {
+			content: counter(step);
+			counter-increment: step;
+			height: 2em;
+			width: 2em;
+			line-height: 2em;
+			border: 0.25em solid #888;
+			display: inline-block;
+			text-align: center;
+			border-radius: 50%;
+			background-color: #888;
+			z-index: 1;
+			color: white;
+			margin: 0 1em 1em 0;
+		}
+
+		.nova-stepper li.completed:before {
+			background-color: var(--success-color);
+			border: 0.25em solid var(--success-color);
+			color: white;
+		}
+
+		.nova-stepper li.active:before {
+			background-color: white;
+			border: 0.25em solid var(--success-color);
+			color: var(--success-color);
+		}
+
+		.nova-stepper li:after {
+			content: '';
+			position: absolute;
+			width: 0.25em;
+			height: 100%;
+			background-color: #888;
+			top: 3.5em;
+			left: 1.125em;
+			z-index: 0;
+		}
+
+		.nova-stepper li:last-child:after {
+			content: none;
+		}
+
+		.nova-stepper li.completed:after {
+			background-color: var(--success-color);
+		}
