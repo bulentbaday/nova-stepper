@@ -13,4 +13,4 @@ Nova-stepper is a css library that helps to make a vertical stepper.
 </ul>
 ```
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Image of Yaktocat](https://github.com/bulentbaday/nova-stepper/blob/main/screenshot.png)
